@@ -1,0 +1,149 @@
+* {
+  font-family: monospace;
+}
+
+html,
+body {
+  overflow-x: hidden;
+  animation: fadeInAnimation ease 1s;
+  animation-iteration-count: 0.7;
+  animation-fill-mode: forwards;
+}
+
+header li {
+  list-style: none;
+  display: inline-block;
+  padding: 20px;
+}
+
+header a {
+  text-decoration: none;
+  color: #ffffff;
+  transition: all 0.3s ease 0s;
+}
+
+header a:hover {
+  color: #7d99d5;
+}
+
+.jumbotron {
+  padding-top: 5rem;
+  background-color: #2c385b;
+}
+
+.collumn {
+  max-width: 90px;
+  pad: 0 10px;
+}
+
+.row {
+  gap: 1rem;
+}
+
+.row:after {
+  content: '';
+  display: table;
+  clear: both;
+}
+
+@media (min-width: 400px) {
+  .countainer-skill {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+.countainer-skill {
+  border-radius: 100px;
+  text-align: center;
+}
+
+/* fade animation */
+@keyframes fadeInAnimation {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+/* jumbotron animation */
+.display-4 {
+  animation: slide-right 1s cubic-bezier(0.65, 0, 0.35, 1);
+}
+
+@keyframes slide-right {
+  0% {
+    transform: translateX(200px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0px);
+    opacity: 1;
+  }
+}
+
+.lead {
+  animation: slide-left 1s cubic-bezier(0.65, 0, 0.35, 1);
+}
+
+@keyframes slide-left {
+  0% {
+    transform: translateX(-200px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0px);
+    opacity: 1;
+  }
+}
+
+.pic {
+  animation: slide-top 1s cubic-bezier(0.65, 0, 0.35, 1);
+}
+
+@keyframes slide-top {
+  0% {
+    transform: translateY(-100px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0px);
+    opacity: 1;
+  }
+}
+
+/* social-media */
+.footer-social {
+  margin: 0 auto;
+  width: 40%;
+  gap: 5px;
+}
+
+.footer-social a {
+  width: 25px;
+  height: 25px;
+  margin: 0 6px;
+  text-align: center;
+  display: inline-block;
+  color: #111;
+  border: 1px solid #111;
+  border-radius: 2px;
+  transform: rotate(45deg);
+  line-height: 25px;
+  transition: all 500ms ease;
+}
+.footer-social a i {
+  -webkit-transform: rotate(-45deg);
+  -moz-transform: rotate(-45deg);
+  -o-transform: rotate(-45deg);
+  -ms-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+}
+/* hover */
+.footer-social a:hover {
+  color: #fff;
+}
+.footer-social a:hover {
+  background: #111;
+}
